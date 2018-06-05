@@ -1,33 +1,43 @@
+<?page title="AA SYSTEM V1.0" contentType="text/html;charset=UTF-8"?>
+<?link rel="stylesheet" type="text/css" href="static/resources/css/login.css"?>
+<?link rel="stylesheet" type="text/css" href="static/resources/css/style.css"?>
 <zk>
-    <hbox>
-        <vlayout>
-            <window id="loginWin"
-                    apply="com.chhaichivon.springzk.view.LoginView"
-                    title="Login with you name" border="normal" hflex="min">
-                <vbox hflex="min" align="center">
-                    <grid hflex="min">
-                        <columns>
-                            <column hflex="min" align="right" />
-                            <column />
-                        </columns>
-                        <rows>
-                            <row>
-                                Account :
-                                <textbox id="account" width="200px" />
-                            </row>
-                            <row>
-                                Password :
-                                <textbox id="password" type="password"
-                                         width="200px" />
-                            </row>
-                        </rows>
-                    </grid>
-                    <label id="message" sclass="warn" value="&#160;" />
-                    <button id="login" label="Login" />
 
+    <div height="25%">
+        <div sclass="login_top_bar header">
+            <image src="static/resources/image/spn_logo.png" width="180px" height="41px"/>
+        </div>
+    </div>
+
+    <div height="70%" align="center">
+        <window id="winLogin" width="280px" border="normal" apply="com.spn.appwriteoff.view.LoginView">
+            <div style="padding:10px;">
+                <vbox>
+
+                    <label value="User ID:" />
+                    <textbox id="txtLoginID" value="" width="235px" placeholder="Username"/>
+
+                    <label value="Password:" />
+                    <textbox id="txtPassword" value="" type="password" width="235px" placeholder="***" />
+
+                    <div height="5px" />
+
+                    <vbox width="100%" align="center">
+                        <!-- <button id="btnLogin" label="Login" forward="winLogin.onOK" /> -->
+                        <button id="btnLogin" label="Login" />
+                    </vbox>
+
+                    <div height="5px" />
                 </vbox>
-            </window>
-            (use account='zkoss' and password='1234' to login)
-        </vlayout>
-    </hbox>
+            </div>
+        </window>
+    </div>
+
+    <div height="5%" sclass="login_footer">
+        <div style="padding:3px;" sclass="login_footer">
+            <div sclass="login_footer">IN-HOUSE SYSTEM V1.0</div>
+            <div sclass="login_footer">Copyright © 2017 SATHAPHANA BANK Plc. All rights reserved.</div>
+        </div>
+    </div>
+
 </zk>
