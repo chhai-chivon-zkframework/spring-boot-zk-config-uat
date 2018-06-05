@@ -1,0 +1,19 @@
+
+<?link rel="stylesheet" type="text/css" href="./../../static/resources/css/style.css"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="WEB-INF/view/template.zul"?>
+<zk>
+    <hbox self="@define(content)" vflex="1" hflex="1" align="center"
+          pack="center" spacing="20px">
+        <vlayout>
+            <window
+                    vflex="true"
+                    position="center"
+                    apply="com.chhaichivon.springzk.view.MasterView">
+
+
+                <textbox id="keywordBox" />
+                <button id="searchButton" label="Search" />
+            </window>
+        </vlayout>
+    </hbox>
+</zk>
