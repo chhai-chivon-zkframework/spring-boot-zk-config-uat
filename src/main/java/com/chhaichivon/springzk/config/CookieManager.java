@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 public class CookieManager {
 
     public static String EMPTY_COOKIE = "";
-    public static String SPN_APP_USER_ID = "SPN_APP_USER_ID";
-    public static String SPN_APP_USER_PWD = "SPN_APP_USER_PWD";
+    public static String APP_USER_ID = "APP_USER_ID";
+    public static String APP_USER_PWD = "APP_USER_PWD";
 
     public static void setCookie(String key , String value){
         HttpServletResponse response = (HttpServletResponse) Executions.getCurrent().getNativeResponse();
         Cookie cookie = new Cookie(key,value);
-        //cookie.setMaxAge(60*60); //1 hour
-        cookie.setMaxAge(0);
+        cookie.setMaxAge(60*60); //1 hour
+        //cookie.setMaxAge(0);
         response.addCookie(cookie);
     }
 
@@ -43,7 +43,7 @@ public class CookieManager {
     }
 
     public static void removeCookie(){
-        CookieManager.setCookie(SPN_APP_USER_ID,EMPTY_COOKIE);
-        CookieManager.setCookie(SPN_APP_USER_PWD,EMPTY_COOKIE);
+        CookieManager.setCookie(APP_USER_ID,EMPTY_COOKIE);
+        CookieManager.setCookie(APP_USER_PWD,EMPTY_COOKIE);
     }
 }
