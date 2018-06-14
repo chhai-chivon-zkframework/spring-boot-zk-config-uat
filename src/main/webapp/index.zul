@@ -64,12 +64,12 @@
                                 <div height="100%">
 
                                     <tabbox id="tbLeftMenu" width="100%" height="100%" mold="accordion">
-                                        <tabs>
-                                            <tab id="tbRoot" label="ROOT" sclass="tab_header" visible="false"/>
-                                            <tab id="tbOperation" label="OPERATION" sclass="tab_header" visible="false"/>
-                                            <tab id="tbView" 	  label="SEARCH TRANSACTION" sclass="tab_header" visible="false"/>
-                                            <tab id="tbSystem" 	  label="SYSTEM SETTING" sclass="tab_header" visible="false"/>
-                                            <tab id="tbSecurity"  label="SECURITY SETTING" sclass="tab_header" visible="false"/>
+                                        <tabs id="mainTab">
+                                            <tab id="tbRoot" label="ROOT" sclass="tab_header" visible="true"/>
+                                            <tab id="tbOperation" label="OPERATION" sclass="tab_header" visible="true"/>
+                                            <tab id="tbView" 	  label="SEARCH TRANSACTION" sclass="tab_header" visible="true"/>
+                                            <tab id="tbSystem" 	  label="SYSTEM SETTING" sclass="tab_header" visible="true"/>
+                                            <tab id="tbSecurity"  label="SECURITY SETTING" sclass="tab_header" visible="true"/>
                                         </tabs>
 
                                         <tabpanels>

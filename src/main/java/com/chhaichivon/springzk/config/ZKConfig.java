@@ -17,7 +17,7 @@ import java.util.Map;
 public class ZKConfig {
     @Bean
     public ServletRegistrationBean dHtmlLayoutServlet() {
-        Map<String, String> params = new HashMap<String, String>();
+        Map<String, String> params = new HashMap<>();
         params.put("update-uri", "/zkau");
         DHtmlLayoutServlet dHtmlLayoutServlet = new DHtmlLayoutServlet();
         ServletRegistrationBean reg = new ServletRegistrationBean(dHtmlLayoutServlet, "*.zul");
@@ -27,7 +27,7 @@ public class ZKConfig {
     }
     @Bean
     public ServletRegistrationBean dHtmlUpdateServlet() {
-        Map<String, String> params = new HashMap<String, String>();
+        Map<String, String> params = new HashMap<>();
         params.put("update-uri", "/zkau/*");
         ServletRegistrationBean reg = new ServletRegistrationBean(new DHtmlUpdateServlet(), "/zkau/*");
         reg.setLoadOnStartup(2);

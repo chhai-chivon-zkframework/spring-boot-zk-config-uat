@@ -9,8 +9,7 @@ import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
-import org.zkoss.zul.Hbox;
-import org.zkoss.zul.Messagebox;
+import org.zkoss.zul.*;
 
 /**
  * @author: Chhai Chivon on 5/25/18.
@@ -20,6 +19,10 @@ public class MasterView  extends SelectorComposer<Component> {
 
     @Wire
     Hbox hbContent;
+    @Wire
+    Tabs mainTab;
+    @Wire
+    Tabbox tbLeftMenu;
 
     @Override
     public void doAfterCompose(Component comp) throws Exception {
@@ -30,7 +33,23 @@ public class MasterView  extends SelectorComposer<Component> {
         }else{
 	     		Executions.sendRedirect("login.zul");
         }
+
+
+        Tab tab;
+        for (int i=0;i<5;i++){
+            tab =  new Tab();
+            tab.setLabel("Label" + i);
+            mainTab.onChildAdded(tab);
+        }
     }
+
+    private void onInit(){
+
+    }
+
+
+
+
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Listen("onClick = #tlbLogout")
     public void confirmLogout() {
