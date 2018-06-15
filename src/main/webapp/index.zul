@@ -50,7 +50,6 @@
 
         <center>
 
-
             <borderlayout>
                 <west size="200px" border="none" splittable="false" collapsible="false">
 
@@ -70,6 +69,7 @@
                                             <tab id="tbView" 	  label="SEARCH TRANSACTION" sclass="tab_header" visible="true"/>
                                             <tab id="tbSystem" 	  label="SYSTEM SETTING" sclass="tab_header" visible="true"/>
                                             <tab id="tbSecurity"  label="SECURITY SETTING" sclass="tab_header" visible="true"/>
+                                            <tab id="tbSecurity11"  label="SECURITY SETTING vv" sclass="tab_header" visible="true"/>
                                         </tabs>
 
                                         <tabpanels>
